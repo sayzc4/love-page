@@ -2,33 +2,44 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You 💌</title>
+<title>Jealousy Test 💘</title>
 
 <style>
 body {
   margin: 0;
-  background: #ffe6eb;
   font-family: monospace;
+  background: #f8d7da;
   display: flex;
   justify-content: center;
 }
 
 .card {
-  margin-top: 80px;
-  background: white;
+  background: #fff;
+  margin-top: 60px;
+  width: 90%;
+  max-width: 350px;
   padding: 25px;
   border-radius: 20px;
-  width: 90%;
-  max-width: 340px;
   text-align: center;
 }
 
+.heart {
+  font-size: 50px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
 h2 {
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 p {
   font-size: 14px;
+  margin: 15px 0;
 }
 
 button {
@@ -38,6 +49,7 @@ button {
   border-radius: 12px;
   border: none;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .yes {
@@ -58,16 +70,16 @@ button:active {
 <body>
 
 <div class="card">
+  <div class="heart">💗</div>
 
-  <h2>Hi...</h2>
-
+  <h2>Hi Tom...</h2>
   <p id="text">
-    I have something to tell you.
+    I saw someone flirting with me today.<br>
+    I didn’t stop them.
   </p>
 
-  <button class="yes" onclick="next()">Tell me</button>
-  <button class="no" onclick="end()">Ignore</button>
-
+  <button class="yes" onclick="next()">What do you mean?</button>
+  <button class="no" onclick="end()">Okay.</button>
 </div>
 
 <script>
@@ -79,28 +91,28 @@ function next() {
 
   if(step === 1){
     document.getElementById("text").innerHTML =
-    "I think I like you.";
+    "They were kinda cute.<br>Just saying.";
   }
 
   else if(step === 2){
     document.getElementById("text").innerHTML =
-    "Do you feel the same?";
+    "You don’t mind, right?";
   }
 
   else if(step === 3){
     document.getElementById("text").innerHTML =
-    "Don’t take too long...";
+    "Hmm... interesting 😏";
   }
 
   else if(step === 4){
     document.getElementById("text").innerHTML =
-    "I might lose interest 😶‍🌫️";
+    "I think I got my answer 💔";
   }
 }
 
 function end(){
   document.getElementById("text").innerHTML =
-  "Oh… okay then.";
+  "Oh... so you really don’t care?";
 }
 
 </script>
